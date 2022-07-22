@@ -1,0 +1,30 @@
+#footer{
+    background-color: rgb(245,245,247);
+    font-family: sans-serif;
+    padding : 0 10%;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+#roadmap{
+    display : flex;
+}
+.roadmap{
+    margin : 0 5px;
+}
+.roadmap-category{
+    font-size: 12px;
+    font-weight: bold;
+    color : rgb(29,29,31);
+}
+.roadmap-lists a{
+    font-size: 12px;
+    font-weight: lighter;
+    text-decoration: none;
+    color : rgb(66,66,69);
+    display : flex;
+}
+#articles {
+    font-size: 12px;
+    font-weight : lighter;
+    margin : 15px 0;
+}
