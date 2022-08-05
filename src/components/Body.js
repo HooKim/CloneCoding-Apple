@@ -1,13 +1,17 @@
 import React from "react";
+import {connect} from 'react-redux'
 import '../styles/body.css'
 
-const Body = (props) => (
+const WrappedBody = (props) => (
     <div id = 'body'>
         {props.body.map((val, idx) => (
             <ProductWrapper key = {idx} productWrapper = {val} />
         ))}
     </div>
 );
+
+const Body = connect((state) => ({body : state.body}))(WrappedBody)
+
 
 const ProductWrapper = (props) => (
     <a href = {"http://" + props.productWrapper.productLink}>

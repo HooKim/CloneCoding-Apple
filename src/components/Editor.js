@@ -1,6 +1,7 @@
+import {connect} from 'react-redux'
 import React from "react";
 
-class Editor extends React.Component {
+class WrappedEditor extends React.Component {
     constructor(props){
         super(props);
         this.state = this.props.state
@@ -128,6 +129,8 @@ class Editor extends React.Component {
         )
     }
 }
+
+const Editor = connect((state) => ({state : state}))(WrappedEditor)
 
 const EditorForHeader = (props) => (
     <div id = "edit-header">

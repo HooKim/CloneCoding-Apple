@@ -1,13 +1,16 @@
 import React from "react";
+import {connect} from 'react-redux'
 import '../styles/footer.css'
 
-const Footer = (props) => (
+const WrappedFooter = (props) => (
     <div id = 'footer'>
         <Footnote footnote = {props.footer.footnote}/>
         <Roadmap roadmap = {props.footer.roadmap} />
         <Articles articles = {props.footer.articles}/>
     </div> 
 )
+
+const Footer = connect((state) => ({footer : state.footer}))(WrappedFooter)
 
 const Footnote = (props) => (
     <div id = 'footnote'>
